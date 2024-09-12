@@ -325,7 +325,7 @@ waveform_draw_cb (void *user_data)
     if (!trk) {
         return FALSE;
     }
-    
+
     GtkAllocation a;
     gtk_widget_get_allocation (w->drawarea, &a);
     const int width = a.width;
@@ -1389,7 +1389,7 @@ waveform_disconnect (void)
 }
 
 static int
-waveform_action_lookup (DB_plugin_action_t *action, int ctx)
+waveform_action_lookup (DB_plugin_action_t *action, ddb_action_context_t ctx)
 {
     DB_playItem_t *it = NULL;
     deadbeef->pl_lock ();
